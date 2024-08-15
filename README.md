@@ -41,16 +41,16 @@ For TypeScript users, this library includes type definitions that make it easy t
 import { OMPFinex } from 'ompfinex-oauth';
 
 OMPFinex.authenticate('your-application-id')
-    .then(response => {
-        if (response.status === 'OK') {
-            console.log('Token:', response.data.token);
-        }
-    })
-    .catch(error => {
-        if (error.status === 'FAILED') {
-            console.error('Authentication failed:', error.error);
-        }
-    });
+  .then(response => {
+    if (response.status === 'OK') {
+      console.log('Token:', response.data.token);
+    }
+  })
+  .catch(error => {
+    if (error.status === 'FAILED') {
+      console.error('Authentication failed:', error.error);
+    }
+  });
 ```
 
 ### Parameters
@@ -67,10 +67,10 @@ If the authentication is successful, the promise resolves with the following obj
 
 ```typescript
 {
-    status: 'OK';
-    data: {
-        token: string;  // The OAuth2 token received from OMPFinex
-    };
+  status: 'OK';
+  data: {
+    token: string;  // The OAuth2 token received from OMPFinex
+  };
 }
 ```
 
@@ -80,8 +80,8 @@ If the authentication fails, the promise rejects with the following object:
 
 ```typescript
 {
-    status: 'FAILED';
-    error: string;  // Error message detailing why the authentication failed
+  status: 'FAILED';
+  error: string;  // Error message detailing why the authentication failed
 }
 ```
 
@@ -93,17 +93,17 @@ Here is a complete example of how to use the library in a web application:
 import { OMPFinex } from 'ompfinex-oauth';
 
 function login() {
-    OMPFinex.authenticate('your-application-id')
-        .then(response => {
-            if (response.status === 'OK') {
-                console.log('Token received:', response.data.token);
-                // Save token and proceed with authenticated actions
-            }
-        })
-        .catch(error => {
-            console.error('Authentication error:', error.error);
-            // Handle authentication failure (e.g., show an error message)
-        });
+  OMPFinex.authenticate('your-application-id')
+    .then(response => {
+      if (response.status === 'OK') {
+        console.log('Token received:', response.data.token);
+        // Save token and proceed with authenticated actions
+      }
+    })
+    .catch(error => {
+      console.error('Authentication error:', error.error);
+      // Handle authentication failure (e.g., show an error message)
+    });
 }
 
 // Example of binding the login function to a button click event
