@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES5",                        // Still compile to ES5
+    "lib": ["ES2015", "DOM"],               // Include ES2015 (for Promise) and DOM (for browser APIs)
+    "module": "CommonJS",                   // Use CommonJS module system
+    "declaration": true,                    // Generate .d.ts files
+    "outDir": "./dist",                     // Output directory for compiled files
+    "strict": true,                         // Enable strict type-checking options
+    "esModuleInterop": true,                // Enable interoperability between CommonJS and ES Modules
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+    "skipLibCheck": true                    // Skip type checking of all declaration files
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
