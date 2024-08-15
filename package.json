@@ -1,6 +1,6 @@
 {
-  "name": "ompfinex-oauth",
-  "version": "1.0.0",
+  "name": "ompfinex-oauth-sdk",
+  "version": "1.0.1",
   "description": "This JavaScript library is designed to facilitate OAuth2 authentication for third-party websites that want to integrate with the OMPFinex platform",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,9 +9,5 @@
     "prepublishOnly": "npm run build"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^22.3.0",
-    "typescript": "^5.5.4"
-  }
+  "license": "ISC"
 }
